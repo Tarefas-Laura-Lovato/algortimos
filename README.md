@@ -1,4 +1,4 @@
-##Tarefas a serem executadas:
+## Tarefas a serem executadas:
 1. Crie um programa que receba um raio de uma circunferência qualquer, calcule e mostre a área dessa circunferência.
 2. O programa deve receber a temperatura em graus Celsius e converter para Kelvin e Fahrenheit.
 3. Os funcionários de uma espresa receberão ajuste em seus salários de acordo com seus anos de contribuição. Aqueles que trabalham na empresa há mais de 5 anos irão receber 5% de aumento,enquanto aqueles que trabalham na empresa por menos de 5 anos, receberão aumento de 3%. Calcule o novo salario dos funcionarios e o aumento de seu salario.
