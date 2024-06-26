@@ -25,9 +25,52 @@ jobs:
         comparison-method: contains
         timeout: 10
         max-score: 10
+    - name: Tarefa2
+      id: tarefa2
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Tarefa2
+        setup-command: gcc tarefa2.c -o tarefa2.exe
+        command: make test
+        input: '5'
+        expected-output: 278.15 41
+        comparison-method: contains
+        timeout: 10
+        max-score: 10
+    - name: Tarefa3-parte1
+      id: tarefa3-parte1
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Tarefa3-parte1
+        setup-command: gcc tarefa3.c -o tarefa3.exe
+        command: make test
+        input: "2000 \n6"
+        expected-output: |-
+          2100
+          100
+        comparison-method: contains
+        timeout: 10
+        max-score: 10
+    - name: Tarefa3-parte2
+      id: tarefa3-parte2
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Tarefa3-parte2
+        setup-command: gcc tarefa3.c -o tarefa3.exe
+        command: make test
+        input: |-
+          2000
+          2
+        expected-output: "2060 \n60"
+        comparison-method: contains
+        timeout: 10
+        max-score: 10
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
         TAREFA1_RESULTS: "${{steps.tarefa1.outputs.result}}"
+        TAREFA2_RESULTS: "${{steps.tarefa2.outputs.result}}"
+        TAREFA3-PARTE1_RESULTS: "${{steps.tarefa3-parte1.outputs.result}}"
+        TAREFA3-PARTE2_RESULTS: "${{steps.tarefa3-parte2.outputs.result}}"
       with:
-        runners: tarefa1
+        runners: tarefa1,tarefa2,tarefa3-parte1,tarefa3-parte2
