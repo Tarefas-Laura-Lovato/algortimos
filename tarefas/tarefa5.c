@@ -7,7 +7,7 @@
 int main() {
     
     //código
-    //mostrar massa inicial, massa final e o tempo
+    //mostrar somente o tempo
 
     return 0;
 }
