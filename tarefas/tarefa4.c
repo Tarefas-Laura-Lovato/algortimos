@@ -10,6 +10,7 @@ int main() {
     scanf("%f", &saldo);
 
     //código
+    //OBS: 1 para depositar, 2 para sacar
     
     return 0;
 }
